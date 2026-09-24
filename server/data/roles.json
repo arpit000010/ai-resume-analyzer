@@ -1,0 +1,38 @@
+{
+  "software engineer": [
+    "data structures",
+    "algorithms",
+    "javascript",
+    "java",
+    "python",
+    "c++",
+    "git",
+    "github",
+    "sql",
+    "api"
+  ],
+  "frontend developer": [
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "tailwind",
+    "bootstrap"
+  ],
+  "backend developer": [
+    "node",
+    "express",
+    "mongodb",
+    "sql",
+    "api"
+  ],
+  "full stack developer": [
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "node",
+    "mongodb",
+    "sql"
+  ]
+}
