@@ -1,39 +1,16 @@
-const skillsMap = {
-  c: ["c"],
-  "c++": ["c++", "cpp"],
-  java: ["java"],
-  python: ["python"],
-  javascript: ["javascript", "js"],
-  react: ["react", "reactjs"],
-  node: ["node", "nodejs"],
-  express: ["express"],
-  mongodb: ["mongodb", "mongo"],
-  sql: ["sql", "mysql"],
-  html: ["html"],
-  css: ["css"],
-  tailwind: ["tailwind", "tailwind css"],
-  bootstrap: ["bootstrap"],
-  git: ["git"],
-  github: ["github"],
-  api: ["api", "apis"],
-  "data structures": ["dsa", "data structures"],
-  algorithms: ["algorithms"]
-};
-
-const skillsList = Object.keys(skillsMap);
-
+const definitions = require("../../shared/skills.json");
+const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+// + and # are token characters, so C does not also match C++ or C#.
+const patterns = definitions.map(({ name, aliases }) => ({
+  name,
+  pattern: new RegExp(
+    `(?<![\\p{L}\\p{N}_+#.])(?:${[name, ...aliases]
+      .map((alias) => escapeRegex(alias).replace(/\s+/g, "\\s+"))
+      .join("|")})(?![\\p{L}\\p{N}_+#])`, "iu"
+  ),
+}));
 const extractSkills = (text) => {
-  const found = [];
-
-  for (const skill in skillsMap) {
-    for (const alias of skillsMap[skill]) {
-      if (text.includes(alias)) {
-        found.push(skill);
-        break;
-      }
-    }
-  }
-  return found;
+  const normalized = text.normalize("NFKC");
+  return patterns.filter(({ pattern }) => pattern.test(normalized)).map(({ name }) => name);
 };
-
-module.exports = { extractSkills, skillsList };
+module.exports = { extractSkills, skillsList: definitions.map(({ name }) => name) };

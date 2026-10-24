@@ -1,50 +1,29 @@
 const extractText = require("../utils/extractText");
-const cleanText = require("../utils/cleanText");
-const { extractSkills } = require("../utils/skillExtractor");
-const detectRole = require("../utils/roleDetector");
-const roles = require("../data/roles.json");
-const getSuggestions = require("../utils/suggestions");
-
+const matchResume = require("../services/matchResume");
+const AppError = require("../utils/AppError");
+const { minJobDescriptionLength, maxJobDescriptionLength } = require("../../shared/constraints.json");
 const analyzeResume = async (req, res) => {
+  const abort = new AbortController();
+  const onClose = () => { if (!res.writableEnded) abort.abort(); };
+  res.once("close", onClose);
   try {
-    const filePath = req.file.path;
-    const { selectedRole } = req.body;
-
-    // Resume processing
-    const resumeText = cleanText(await extractText(filePath));
-    const resumeSkills = extractSkills(resumeText);
-
-    // Role-based JD skills
-    const jdSkills = roles[selectedRole] || [];
-
-    const matchedSkills = jdSkills.filter(skill =>
-      resumeSkills.includes(skill)
-    );
-
-    const missingJDSkills = jdSkills.filter(skill =>
-      !resumeSkills.includes(skill)
-    );
-
-    const jdMatchScore = jdSkills.length
-      ? Math.round((matchedSkills.length / jdSkills.length) * 100)
-      : 0;
-
-    const suggestions = getSuggestions(missingJDSkills, jdMatchScore);
-
-    res.json({
-      success: true,
-      selectedRole,
-      jdMatchScore,
-      resumeSkills,
-      matchedSkills,
-      missingJDSkills,
-      suggestions
-    });
-
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Analysis failed" });
+    if (!req.file) throw new AppError(400, "RESUME_REQUIRED", "Upload a PDF resume.");
+    const { jobDescription } = req.body;
+    if (Object.keys(req.body).some((key) => key !== "jobDescription")) {
+      throw new AppError(400, "INVALID_FIELDS", "Only the jobDescription text field is supported.");
+    }
+    if (typeof jobDescription !== "string" || jobDescription.trim().length < minJobDescriptionLength || jobDescription.length > maxJobDescriptionLength) {
+      throw new AppError(400, "INVALID_JOB_DESCRIPTION", `Provide a job description of ${minJobDescriptionLength}–${maxJobDescriptionLength} characters.`);
+    }
+    if (req.file.buffer.subarray(0, 5).toString("ascii") !== "%PDF-") {
+      throw new AppError(415, "INVALID_PDF", "The uploaded file is not a valid PDF.");
+    }
+    const resumeText = await extractText(req.file.buffer, { signal: abort.signal });
+    res.json({ success: true, ...matchResume(resumeText, jobDescription) });
+  } finally {
+    res.removeListener("close", onClose);
+    // No resume files are written to disk; release the request buffer.
+    if (req.file) delete req.file.buffer;
   }
 };
-
 module.exports = { analyzeResume };

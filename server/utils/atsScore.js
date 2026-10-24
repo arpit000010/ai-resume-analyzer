@@ -1,5 +1,3 @@
-const calculateATSScore = (foundSkills, totalSkills) => {
-  return Math.round((foundSkills.length / totalSkills.length) * 100);
-};
-
-module.exports = calculateATSScore;
+module.exports = (matchedSkills, requiredSkills) => requiredSkills.length
+  ? Math.round((matchedSkills.length / requiredSkills.length) * 100)
+  : null;

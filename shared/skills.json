@@ -1,0 +1,278 @@
+[
+  {
+    "name": "c",
+    "aliases": [
+      "c language",
+      "c programming"
+    ]
+  },
+  {
+    "name": "c++",
+    "aliases": [
+      "cpp"
+    ]
+  },
+  {
+    "name": "c#",
+    "aliases": [
+      "c sharp",
+      "csharp"
+    ]
+  },
+  {
+    "name": "java",
+    "aliases": []
+  },
+  {
+    "name": "python",
+    "aliases": []
+  },
+  {
+    "name": "javascript",
+    "aliases": [
+      "js",
+      "ecmascript"
+    ]
+  },
+  {
+    "name": "typescript",
+    "aliases": [
+      "ts"
+    ]
+  },
+  {
+    "name": "react",
+    "aliases": [
+      "reactjs",
+      "react.js"
+    ]
+  },
+  {
+    "name": "node",
+    "aliases": [
+      "nodejs",
+      "node.js"
+    ]
+  },
+  {
+    "name": "express",
+    "aliases": [
+      "expressjs",
+      "express.js"
+    ]
+  },
+  {
+    "name": "mongodb",
+    "aliases": [
+      "mongo"
+    ]
+  },
+  {
+    "name": "sql",
+    "aliases": [
+      "mysql",
+      "postgresql",
+      "postgres",
+      "sqlite",
+      "t-sql"
+    ]
+  },
+  {
+    "name": "html",
+    "aliases": [
+      "html5"
+    ]
+  },
+  {
+    "name": "css",
+    "aliases": [
+      "css3"
+    ]
+  },
+  {
+    "name": "tailwind",
+    "aliases": [
+      "tailwindcss",
+      "tailwind css"
+    ]
+  },
+  {
+    "name": "bootstrap",
+    "aliases": []
+  },
+  {
+    "name": "git",
+    "aliases": []
+  },
+  {
+    "name": "github",
+    "aliases": []
+  },
+  {
+    "name": "api",
+    "aliases": [
+      "apis",
+      "rest api",
+      "restful api",
+      "rest apis",
+      "restful apis"
+    ]
+  },
+  {
+    "name": "data structures",
+    "aliases": [
+      "dsa",
+      "data structure"
+    ]
+  },
+  {
+    "name": "algorithms",
+    "aliases": [
+      "algorithm"
+    ]
+  },
+  {
+    "name": "docker",
+    "aliases": []
+  },
+  {
+    "name": "kubernetes",
+    "aliases": [
+      "k8s"
+    ]
+  },
+  {
+    "name": "aws",
+    "aliases": [
+      "amazon web services"
+    ]
+  },
+  {
+    "name": "azure",
+    "aliases": [
+      "microsoft azure"
+    ]
+  },
+  {
+    "name": "gcp",
+    "aliases": [
+      "google cloud",
+      "google cloud platform"
+    ]
+  },
+  {
+    "name": "linux",
+    "aliases": []
+  },
+  {
+    "name": "testing",
+    "aliases": [
+      "unit testing",
+      "integration testing",
+      "automated tests"
+    ]
+  },
+  {
+    "name": "jest",
+    "aliases": []
+  },
+  {
+    "name": "ci/cd",
+    "aliases": [
+      "ci cd",
+      "continuous integration",
+      "continuous delivery",
+      "continuous deployment"
+    ]
+  },
+  {
+    "name": "machine learning",
+    "aliases": [
+      "ml"
+    ]
+  },
+  {
+    "name": "nlp",
+    "aliases": [
+      "natural language processing"
+    ]
+  },
+  {
+    "name": "pandas",
+    "aliases": []
+  },
+  {
+    "name": "numpy",
+    "aliases": []
+  },
+  {
+    "name": "tensorflow",
+    "aliases": []
+  },
+  {
+    "name": "pytorch",
+    "aliases": []
+  },
+  {
+    "name": "django",
+    "aliases": []
+  },
+  {
+    "name": "flask",
+    "aliases": []
+  },
+  {
+    "name": "fastapi",
+    "aliases": [
+      "fast api"
+    ]
+  },
+  {
+    "name": "spring",
+    "aliases": [
+      "spring boot",
+      "springboot"
+    ]
+  },
+  {
+    "name": "angular",
+    "aliases": [
+      "angularjs"
+    ]
+  },
+  {
+    "name": "vue",
+    "aliases": [
+      "vuejs",
+      "vue.js"
+    ]
+  },
+  {
+    "name": "next.js",
+    "aliases": [
+      "nextjs"
+    ]
+  },
+  {
+    "name": "redis",
+    "aliases": []
+  },
+  {
+    "name": "graphql",
+    "aliases": []
+  },
+  {
+    "name": "agile",
+    "aliases": []
+  },
+  {
+    "name": "communication",
+    "aliases": [
+      "communication skills"
+    ]
+  },
+  {
+    "name": "leadership",
+    "aliases": []
+  }
+]

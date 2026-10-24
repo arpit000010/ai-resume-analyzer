@@ -1,0 +1,5 @@
+{
+  "maxUploadBytes": 5242880,
+  "minJobDescriptionLength": 20,
+  "maxJobDescriptionLength": 20000
+}
