@@ -3,6 +3,8 @@ node_modules/
 
 # Environment variables
 .env
+.env.*
+!.env.example
 
 # Build outputs
 dist/
@@ -18,3 +20,11 @@ yarn-error.log*
 
 # OS files
 .DS_Store
+
+# Local NLP environment, model weights, and Python artifacts
+.venv/
+.models/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log

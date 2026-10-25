@@ -4,68 +4,84 @@
     "aliases": [
       "c language",
       "c programming"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "c++",
     "aliases": [
-      "cpp"
-    ]
+      "cpp",
+      "c++11",
+      "c++14",
+      "c++17",
+      "c++20",
+      "c++23"
+    ],
+    "category": "technical"
   },
   {
     "name": "c#",
     "aliases": [
       "c sharp",
       "csharp"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "java",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "python",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "javascript",
     "aliases": [
       "js",
       "ecmascript"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "typescript",
     "aliases": [
       "ts"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "react",
     "aliases": [
       "reactjs",
       "react.js"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "node",
     "aliases": [
       "nodejs",
       "node.js"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "express",
     "aliases": [
       "expressjs",
       "express.js"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "mongodb",
     "aliases": [
       "mongo"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "sql",
@@ -75,38 +91,45 @@
       "postgres",
       "sqlite",
       "t-sql"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "html",
     "aliases": [
       "html5"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "css",
     "aliases": [
       "css3"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "tailwind",
     "aliases": [
       "tailwindcss",
       "tailwind css"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "bootstrap",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "git",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "github",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "api",
@@ -116,53 +139,63 @@
       "restful api",
       "rest apis",
       "restful apis"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "data structures",
     "aliases": [
       "dsa",
       "data structure"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "algorithms",
     "aliases": [
-      "algorithm"
-    ]
+      "algorithm",
+      "dsa"
+    ],
+    "category": "technical"
   },
   {
     "name": "docker",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "kubernetes",
     "aliases": [
       "k8s"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "aws",
     "aliases": [
       "amazon web services"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "azure",
     "aliases": [
       "microsoft azure"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "gcp",
     "aliases": [
       "google cloud",
       "google cloud platform"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "linux",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "testing",
@@ -170,11 +203,13 @@
       "unit testing",
       "integration testing",
       "automated tests"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "jest",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "ci/cd",
@@ -183,96 +218,191 @@
       "continuous integration",
       "continuous delivery",
       "continuous deployment"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "machine learning",
     "aliases": [
       "ml"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "nlp",
     "aliases": [
       "natural language processing"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "pandas",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "numpy",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "tensorflow",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "pytorch",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "django",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "flask",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "fastapi",
     "aliases": [
       "fast api"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "spring",
     "aliases": [
       "spring boot",
       "springboot"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "angular",
     "aliases": [
       "angularjs"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "vue",
     "aliases": [
       "vuejs",
       "vue.js"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "next.js",
     "aliases": [
       "nextjs"
-    ]
+    ],
+    "category": "technical"
   },
   {
     "name": "redis",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "graphql",
-    "aliases": []
+    "aliases": [],
+    "category": "technical"
   },
   {
     "name": "agile",
-    "aliases": []
+    "aliases": [],
+    "category": "other"
   },
   {
     "name": "communication",
     "aliases": [
       "communication skills"
-    ]
+    ],
+    "category": "other"
   },
   {
     "name": "leadership",
-    "aliases": []
+    "aliases": [],
+    "category": "other"
+  },
+  {
+    "name": "cuda",
+    "aliases": [],
+    "category": "technical"
+  },
+  {
+    "name": "operating systems",
+    "aliases": [
+      "operating system",
+      "os internals"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "embedded systems",
+    "aliases": [
+      "embedded software",
+      "embedded programming"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "multithreading",
+    "aliases": [
+      "multi-threading",
+      "multithreaded",
+      "multi-threaded"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "debugging",
+    "aliases": [
+      "debug",
+      "debugger"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "computer architecture",
+    "aliases": [
+      "computer architectures"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "networking",
+    "aliases": [
+      "computer networks",
+      "network protocols"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "performance optimization",
+    "aliases": [
+      "performance optimisation",
+      "performance tuning"
+    ],
+    "category": "technical"
+  },
+  {
+    "name": "perl",
+    "aliases": [],
+    "category": "technical"
+  },
+  {
+    "name": "object-oriented programming",
+    "aliases": [
+      "oop",
+      "object oriented programming",
+      "object-oriented design",
+      "object oriented design"
+    ],
+    "category": "technical"
   }
 ]

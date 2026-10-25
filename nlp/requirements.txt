@@ -1,0 +1,7 @@
+fastapi==0.162.0
+uvicorn==0.54.0
+sentence-transformers==5.7.0
+# Pin the numerical/model runtime tested with the service.
+numpy==2.4.6
+torch==2.14.1
+transformers==5.20.2

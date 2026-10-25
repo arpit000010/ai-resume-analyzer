@@ -1,7 +1,7 @@
 // Small real PDFs, with correct byte offsets, exercise the actual parser.
 module.exports = (text = "JavaScript React Node.js SQL") => {
-  const escaped = text.replace(/[\\()]/g, "\\$&");
-  const stream = `BT /F1 12 Tf 50 750 Td (${escaped}) Tj ET\n`;
+  const lines = (Array.isArray(text) ? text : [text]).map((line) => line.replace(/[\\()]/g, "\\$&"));
+  const stream = `BT /F1 12 Tf 50 750 Td ${lines.map((line, index) => `${index ? '0 -24 Td ' : ''}(${line}) Tj`).join('\n')} ET\n`;
   const objects = [
     "<< /Type /Catalog /Pages 2 0 R >>",
     "<< /Type /Pages /Kids [3 0 R] /Count 1 >>",

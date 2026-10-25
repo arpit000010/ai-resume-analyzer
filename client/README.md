@@ -1,16 +1,11 @@
-# React + Vite
+# ResumeLens frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite + Tailwind dashboard for AI Resume Analyzer 2.0. See the root [README](../README.md) for the three-service setup, environment variables and real end-to-end checks.
 
-Currently, two official plugins are available:
+- `npm ci` — install existing dependencies.
+- `npm run dev` — local Vite server with the configured Express proxy.
+- `npm test` — API/validation and rendered result-state tests.
+- `npm run lint` — React/JavaScript ESLint checks.
+- `npm run build` — production assets in ignored `dist/`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`src/pages` composes the workflow; `components` renders forms and results; `hooks` owns form/request state; `services` handles HTTP; `utils` validates input and organizes results; `config` resolves the browser API URL. `src/lib/analyzer.js` and `src/SemanticResults.jsx` retain the previous import paths.
